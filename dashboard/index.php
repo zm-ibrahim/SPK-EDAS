@@ -16,7 +16,7 @@
                             <h4>Hello</h4>
                         </div>
                         <div class="card-body">
-                            <small>username</small>
+                            <small><?= $username ?></small>
                         </div>
                     </div>
                 </div>

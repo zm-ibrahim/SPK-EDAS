@@ -14,11 +14,12 @@ if (isset($_POST['login'])) {
     // Query ke database.
     $sql = mysqli_query($connect, "SELECT id, username, email, password FROM informasi_pengguna WHERE username = '$username'");
 
-    list($id, $username, $password, $role) = mysqli_fetch_array($sql);
+    list($id, $username, $email, $password) = mysqli_fetch_array($sql);
 
     // Jika data ditemukan dalam database, maka akan melakukan validasi dengan password_verify.
     // $userpass -----> diambil dari password yang diinputkan user lewat form login
     // $password -----> diambil dari password dalam database
+
     if (mysqli_num_rows($sql) > 0 && password_verify($userpass, $password)) {
         $_SESSION['username'] = $username;
         $_SESSION['user_id'] = $id;

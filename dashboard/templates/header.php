@@ -1,16 +1,15 @@
 <?php
-        define('baseURL', explode('dashboard', $_SERVER['REQUEST_URI'])[0]);
-        define('ROOT', dirname(__DIR__, 2));
-        include "dashboard/process/throw.php";
-        Check or throw
-        session_start();
-        if (isset($_SESSION['username']) == false) {
-            header("location:" . baseURL . "login.php");
-        }
+define('baseURL', explode('dashboard', $_SERVER['REQUEST_URI'])[0]);
+define('ROOT', dirname(__DIR__, 2));
+// Check or throw
+session_start();
+if (isset($_SESSION['username']) == false) {
+    header("location:" . baseURL . "login.php");
+}
 
-        $username = $_SESSION['username'];
-        $id = $_SESSION['user_id'];
-        ?> 
+$username = $_SESSION['username'];
+$id = $_SESSION['user_id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
