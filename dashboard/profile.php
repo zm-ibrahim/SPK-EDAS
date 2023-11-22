@@ -58,7 +58,6 @@ $profile = $profile->fetch_assoc();
                     <?php
                     }
                     ?>
-
                     <!-- ALERT ENDS -->
 
                     <div class="form-group">
