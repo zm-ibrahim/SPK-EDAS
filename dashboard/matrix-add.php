@@ -40,7 +40,7 @@ $data = mysqli_query($connect, $sql);
                 ?>
                         <div class="card">
                             <div class="card-header">
-                                <h4>Add Matrix</h4>
+                                <h4>Add to Matrix</h4>
                             </div>
                             <form action="../dashboard/process/m-add.php" method="post">
                                 <input type="hidden" name="a-id" value="<?= $row['id_alternatif'] ?>">

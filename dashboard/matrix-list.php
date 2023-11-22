@@ -15,7 +15,7 @@ $data_alternatif = mysqli_query($connect, $sql_alternatif);
     <div class="section-header">
         <h1>Matrix Value</h1>
         <div class="section-header-button">
-            <a href="matrix-add.php" class="btn btn-primary">Check Unlisted Matrix</a>
+            <a href="matrix-add.php" class="btn btn-primary">Check Unlisted Values</a>
         </div>
     </div>
     <div class="section-body">

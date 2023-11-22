@@ -35,8 +35,8 @@
         <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-calculator"></i> <span>Tetapan</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="#">NSP</a></li>
-                <li><a class="nav-link" href="#">NSN</a></li>
+                <li><a class="nav-link" href="#">Rerata</a></li>
+                <li><a class="nav-link" href="#">Normalisasi</a></li>
             </ul>
         </li>
         <li><a class="nav-link" href="#"><i class="fas fa-trophy"></i> <span>Peringkat</span></a></li>
