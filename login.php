@@ -7,8 +7,12 @@ if (isset($_SESSION['username'])) {
 <?php
 if (isset($_SESSION['flash_message'])) { ?>
     <div class="alert alert-<?= $_SESSION['flash_message'][1] ?> alert-dismissible fade show" role="alert">
-        <?= $_SESSION['flash_message'][0] ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert-body">
+            <button class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            <?= $_SESSION['flash_message'][0] ?>
+        </div>
     </div>
 <?php
     session_unset();
