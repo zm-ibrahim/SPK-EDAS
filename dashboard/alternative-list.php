@@ -44,11 +44,11 @@ include '../connect.php'
                                             <td><?= $data['kode'] ?></td>
                                             <td><?= $data['nama'] ?>
                                                 <div class="table-links">
-                                                    <a href="alternative-view.php?id=<?= $data['id'] ?>">View</a>
+                                                    <a href="alternative-view.php?alt=<?= $data['id'] ?>">View</a>
                                                     <div class="bullet"></div>
-                                                    <a href="alternative-edit.php?id=<?= $data['id'] ?>">Edit</a>
+                                                    <a href="alternative-edit.php?alt=<?= $data['id'] ?>">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <a href="../dashboard/process/alt-del?id=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                    <a href="../dashboard/process/alt-del?alt=<?= $data['id'] ?>" class="text-danger">Trash</a>
                                                 </div>
                                             </td>
                                             <td>

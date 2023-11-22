@@ -1,13 +1,6 @@
 <?php include 'templates/layout.php'; ?>
 
-<?php
-include '../connect.php';
 
-$sql = "SELECT * FROM informasi_pengguna WHERE id=$id";
-$profile = mysqli_query($connect, $sql);
-$profile = $profile->fetch_assoc();
-
-?>
 <!-- Validation -->
 <script>
     function check(data) {

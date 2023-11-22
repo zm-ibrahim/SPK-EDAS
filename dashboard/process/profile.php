@@ -2,6 +2,9 @@
 include '../../connect.php';
 define('baseURL', explode('dashboard', $_SERVER['REQUEST_URI'])[0]);
 session_start();
+if (isset($_SESSION['username']) == false) {
+    header("location:" . baseURL . "login.php");
+}
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];

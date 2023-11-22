@@ -44,11 +44,11 @@ include '../connect.php';
                                             <td><?= $data['kode'] ?></td>
                                             <td><?= $data['nama'] ?>
                                                 <div class="table-links">
-                                                    <a href="kriteria-view.php?id=<?= $data['id'] ?>">View</a>
+                                                    <a href="kriteria-view.php?kid=<?= $data['id'] ?>">View</a>
                                                     <div class="bullet"></div>
-                                                    <a href="kriteria-edit.php?id=<?= $data['id'] ?>">Edit</a>
+                                                    <a href="kriteria-edit.php?kid=<?= $data['id'] ?>">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <a href="../dashboard/process/c-del?id=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                    <a href="../dashboard/process/c-del?kid=<?= $data['id'] ?>" class="text-danger">Trash</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -58,7 +58,9 @@ include '../connect.php';
                                                 <?= $data['bobot'] ?>
                                             </td>
                                             <td>
-                                                <div class="badge badge-primary"><?= $data['jenis'] ?></div>
+                                                <div class="badge <?php echo ($data['jenis'] === 'Cost') ? 'badge-warning' : 'badge-primary'; ?>">
+                                                    <?php echo $data['jenis']; ?>
+                                                </div>
                                             </td>
                                         </tr>
                                 <?php
