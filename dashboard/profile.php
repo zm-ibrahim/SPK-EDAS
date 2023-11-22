@@ -45,19 +45,7 @@ $profile = $profile->fetch_assoc();
                 <div class="card-body">
 
                     <!-- ALERT -->
-                    <?php
-                    if (isset($_SESSION['flash_message'])) { ?>
-                        <div class="alert alert-<?= $_SESSION['flash_message'][1] ?> alert-dismissible fade show" role="alert">
-                            <div class="alert-body">
-                                <button class="close" data-dismiss="alert">
-                                    <span>&times;</span>
-                                </button>
-                                <?= $_SESSION['flash_message'][0] ?>
-                            </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
+                    <?php include 'templates/flash.php' ?>
                     <!-- ALERT ENDS -->
 
                     <div class="form-group">

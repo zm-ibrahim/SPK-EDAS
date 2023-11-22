@@ -18,45 +18,47 @@
                         <h4>Tambahkan Kriteria Baru</h4>
                     </div>
                     <div class="card-body">
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode Kriteria</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="kode">
+                        <form action="../dashboard/process/c-add.php" method="post">
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode Kriteria</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text" class="form-control" name="kode">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kriteria</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="nama">
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kriteria</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text" class="form-control" name="nama">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
-                            <div class="col-sm-12 col-md-7">
-                                <select class="form-control selectric" name="jenis">
-                                    <option value="0">Benefit</option>
-                                    <option value="1">Cost</option>
-                                </select>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <select class="form-control selectric" name="jenis">
+                                        <option value="Benefit">Benefit</option>
+                                        <option value="Cost">Cost</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bobot</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="number" class="form-control" name="bobot">
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bobot</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="number" class="form-control" name="bobot">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
-                            <div class="col-sm-12 col-md-7">
-                                <textarea class="summernote-simple" name="deskripsi"></textarea>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <textarea class="summernote-simple" name="desk"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                            <div class="col-sm-12 col-md-7">
-                                <button class="btn btn-primary" name="submit">Create Criteria</button>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                <div class="col-sm-12 col-md-7">
+                                    <button class="btn btn-primary" name="submit">Create Criteria</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

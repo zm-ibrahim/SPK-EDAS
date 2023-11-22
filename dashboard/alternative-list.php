@@ -1,4 +1,8 @@
-<?php include 'templates/layout.php'; ?>
+<?php
+include 'templates/layout.php';
+include '../connect.php'
+
+?>
 <section class="section">
     <div class="section-header">
         <h1>List of Alternative</h1>
@@ -14,6 +18,9 @@
                         <h4>All Alternative</h4>
                     </div>
                     <div class="card-body">
+                        <!-- ALERT -->
+                        <?php include 'templates/flash.php' ?>
+                        <!-- ALERT ENDS -->
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <tr>
@@ -21,50 +28,41 @@
                                     <th>Title</th>
                                     <th>Description</th>
                                 </tr>
-                                <tr>
-                                    <td>A1</td>
-                                    <td>Alternatif 1
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        Sebuah Deskripsi
-                                    </td>
-                                </tr>
+                                <!-- Pagination Module -->
+                                <?php
+                                // Get actual rows of data
+                                $sql = "SELECT * FROM alternatif";
+
+                                include '../dashboard/templates/page-limit.php';
+
+                                if (mysqli_num_rows($datas) > 0) {
+                                    $i = $halaman_awal + 1;
+                                    foreach ($datas as $data) {
+                                ?>
+                                        <!-- Ends Pagination Module -->
+                                        <tr>
+                                            <td><?= $data['kode'] ?></td>
+                                            <td><?= $data['nama'] ?>
+                                                <div class="table-links">
+                                                    <a href="alternative-view.php?id=<?= $data['id'] ?>">View</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="alternative-edit.php?id=<?= $data['id'] ?>">Edit</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="../dashboard/process/alt-del?id=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <?= $data['deskripsi'] ?>
+                                            </td>
+                                        </tr>
+                                <?php
+                                        $i++;
+                                    }
+                                }
+                                ?>
                             </table>
                         </div>
-                        <div class="float-right">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <?php include '../dashboard/templates/page.php' ?>
                     </div>
                 </div>
             </div>

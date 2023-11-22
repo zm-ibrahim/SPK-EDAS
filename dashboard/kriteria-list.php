@@ -1,4 +1,7 @@
-<?php include 'templates/layout.php'; ?>
+<?php
+include 'templates/layout.php';
+include '../connect.php';
+?>
 <section class="section">
     <div class="section-header">
         <h1>List of Criteria</h1>
@@ -7,6 +10,9 @@
         </div>
     </div>
     <div class="section-body">
+        <!-- ALERT -->
+        <?php include 'templates/flash.php' ?>
+        <!-- ALERT ENDS -->
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card">
@@ -23,56 +29,46 @@
                                     <th>Bobot</th>
                                     <th>Category</th>
                                 </tr>
-                                <tr>
-                                    <td>C1</td>
-                                    <td>Kriteria
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        Sebuah Deskripsi
-                                    </td>
-                                    <td>
-                                        30
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-primary">Benefit</div>
-                                    </td>
-                                </tr>
+                                <!-- Pagination Module -->
+                                <?php
+                                $sql = "SELECT * FROM kriteria";
+
+                                include '../dashboard/templates/page-limit.php';
+
+                                if (mysqli_num_rows($datas) > 0) {
+                                    $i = $halaman_awal + 1;
+                                    foreach ($datas as $data) {
+                                ?>
+                                        <!-- Ends Pagination Module -->
+                                        <tr>
+                                            <td><?= $data['kode'] ?></td>
+                                            <td><?= $data['nama'] ?>
+                                                <div class="table-links">
+                                                    <a href="kriteria-view.php?id=<?= $data['id'] ?>">View</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="kriteria-edit.php?id=<?= $data['id'] ?>">Edit</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="../dashboard/process/c-del?id=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <?= $data['deskripsi'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $data['bobot'] ?>
+                                            </td>
+                                            <td>
+                                                <div class="badge badge-primary"><?= $data['jenis'] ?></div>
+                                            </td>
+                                        </tr>
+                                <?php
+                                        $i++;
+                                    }
+                                }
+                                ?>
                             </table>
                         </div>
-                        <div class="float-right">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <?php include '../dashboard/templates/page.php' ?>
                     </div>
                 </div>
             </div>
