@@ -22,13 +22,14 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode Alternatif</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="kode">
+                                    <input type="text" class="form-control" name="kode" required placeholder="contoh: A1">
+                                    <small>Pastikan kode tidak sama dengan item lainnya</small>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Alternatif</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">

@@ -19,7 +19,7 @@ $data = $data->fetch_assoc();
                 <i class="fas fa-arrow-left"></i>
             </a>
         </div>
-        <h1>Add New Criteria</h1>
+        <h1>Update Existing Criteria</h1>
     </div>
 
     <div class="section-body">
@@ -28,7 +28,7 @@ $data = $data->fetch_assoc();
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Tambahkan Kriteria Baru</h4>
+                        <h4>Perbarui Kriteria</h4>
                     </div>
                     <div class="card-body">
                         <form action="../dashboard/process/c-edit.php" method="post">
@@ -36,13 +36,14 @@ $data = $data->fetch_assoc();
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode Kriteria</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="kode" value="<?= $data['kode'] ?>">
+                                    <input type="text" class="form-control" name="kode" value="<?= $data['kode'] ?>" required placeholder="contoh: K1">
+                                    <small>Pastikan kode tidak sama dengan item lainnya</small>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kriteria</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="nama" value="<?= $data['nama'] ?>">
+                                    <input type="text" class="form-control" name="nama" value="<?= $data['nama'] ?>" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
@@ -57,7 +58,7 @@ $data = $data->fetch_assoc();
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bobot</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="number" class="form-control" name="bobot" value="<?= $data['bobot'] ?>">
+                                    <input type="number" class="form-control" name="bobot" value="<?= $data['bobot'] ?>" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">

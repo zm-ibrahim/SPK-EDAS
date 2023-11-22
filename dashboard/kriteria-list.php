@@ -48,7 +48,7 @@ include '../connect.php';
                                                     <div class="bullet"></div>
                                                     <a href="kriteria-edit.php?kid=<?= $data['id'] ?>">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <a href="../dashboard/process/c-del?kid=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                    <a href="../dashboard/process/c-del.php?kid=<?= $data['id'] ?>" class="text-danger">Trash</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -63,9 +63,16 @@ include '../connect.php';
                                                 </div>
                                             </td>
                                         </tr>
-                                <?php
+                                    <?php
                                         $i++;
                                     }
+                                } else {
+                                    ?>
+                                    <div class="empty-state">
+                                        <i class="fas fa-question"></i>
+                                        No Data Found
+                                    </div>
+                                <?php
                                 }
                                 ?>
                             </table>

@@ -22,13 +22,14 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode Kriteria</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="kode">
+                                    <input type="text" class="form-control" name="kode" required placeholder="contoh : K1">
+                                    <small>Pastikan Kode tidak sama dengan item lainnya</small>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kriteria</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" class="form-control" name="nama">
+                                    <input type="text" class="form-control" name="nama" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
@@ -43,7 +44,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bobot</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="number" class="form-control" name="bobot">
+                                    <input type="number" class="form-control" name="bobot" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">

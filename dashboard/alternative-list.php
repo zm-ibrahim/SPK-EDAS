@@ -48,16 +48,23 @@ include '../connect.php'
                                                     <div class="bullet"></div>
                                                     <a href="alternative-edit.php?alt=<?= $data['id'] ?>">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <a href="../dashboard/process/alt-del?alt=<?= $data['id'] ?>" class="text-danger">Trash</a>
+                                                    <a href="../dashboard/process/alt-del.php?alt=<?= $data['id'] ?>" class="text-danger">Trash</a>
                                                 </div>
                                             </td>
                                             <td>
                                                 <?= $data['deskripsi'] ?>
                                             </td>
                                         </tr>
-                                <?php
+                                    <?php
                                         $i++;
                                     }
+                                } else {
+                                    ?>
+                                    <div class="empty-state">
+                                        <i class="fas fa-question"></i>
+                                        No Data Found
+                                    </div>
+                                <?php
                                 }
                                 ?>
                             </table>

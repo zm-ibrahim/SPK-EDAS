@@ -27,8 +27,8 @@
         <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-times"></i> <span>Matriks</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="#">Lihat Matriks</a></li>
-                <li><a class="nav-link" href="#">Tambah Nilai Matriks</a></li>
+                <li><a class="nav-link" href="matrix-list.php">Lihat Matriks</a></li>
+                <li><a class="nav-link" href="matrix-add.php">Tambah Nilai Matriks</a></li>
             </ul>
         </li>
         <li class="menu-header">KALKULASI</li>
