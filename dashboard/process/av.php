@@ -23,9 +23,7 @@ $sql_insert =
     GROUP BY 
         k.id;";
 
-$insert = mysqli_query($connect, $sql_insert);
-
-if ($insert) $_SESSION['flash_message'] = ['Average Solution updated successfully!', 'success'];
+if (mysqli_query($connect, $sql_insert)) $_SESSION['flash_message'] = ['Average Solution updated successfully!', 'success'];
 else $_SESSION['flash_message'] = ['Cant update alternative', 'danger'];
 mysqli_close($connect);
 header('Location: ../rerata.php');
