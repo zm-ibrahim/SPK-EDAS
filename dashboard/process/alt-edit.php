@@ -21,8 +21,14 @@ if (isset($_POST['submit'])) {
         deskripsi = '$desc'
     WHERE  id = '$a_id'";
 
-    if (mysqli_query($connect, $sql)) $_SESSION['flash_message'] = ['Alternative has been updated!', 'success'];
-    else $_SESSION['flash_message'] = ['Cant update alternative!', 'danger'];
+    try {
+        mysqli_query($connect, $sql);
+        $_SESSION['flash_message'] = ['Alternative has been updated!', 'success'];
+    } catch (\Throwable $th) {
+        if (mysqli_errno($connect) == 1062) {
+            $_SESSION['flash_message'] = ['Alternative Code already used !', 'danger'];
+        } else $_SESSION['flash_message'] = [mysqli_error($connect), 'danger'];
+    }
 
     mysqli_close($connect);
     header('Location: ../alternative-list.php');

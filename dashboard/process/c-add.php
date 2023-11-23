@@ -15,8 +15,15 @@ if (isset($_POST['submit'])) {
 
     // Query
     $sql = "INSERT INTO kriteria (kode, nama, jenis, bobot, deskripsi) VALUES ('$kode', '$name', '$jenis','$bobot','$desc')";
-    if (mysqli_query($connect, $sql)) $_SESSION['flash_message'] = ['Criteria has been added!', 'success'];
-    else $_SESSION['flash_message'] = ['Cant add Criteria!', 'danger'];
+
+    try {
+        mysqli_query($connect, $sql);
+        $_SESSION['flash_message'] = ['Criteria has been added!', 'success'];
+    } catch (\Throwable $th) {
+        if (mysqli_errno($connect) == 1062) {
+            $_SESSION['flash_message'] = ['Criteria Code already used !', 'danger'];
+        } else $_SESSION['flash_message'] = [mysqli_error($connect), 'danger'];
+    }
 
     mysqli_close($connect);
     header('Location: ../kriteria-list.php');

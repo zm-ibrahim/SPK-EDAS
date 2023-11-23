@@ -1,4 +1,7 @@
-<?php include 'templates/layout.php'; ?>
+<?php include 'templates/layout.php';
+// include '../connect.php';
+// include 'process/dashboard.php';
+?>
 <section class="section">
     <div class="section-header">
         <h1>Dashboard</h1>

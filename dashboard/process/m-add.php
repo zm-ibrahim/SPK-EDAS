@@ -13,8 +13,15 @@ if (isset($_POST['submit'])) {
 
     // Query
     $sql = "INSERT INTO matriks_evaluasi (id_alternatif, id_kriteria, nilai) VALUES ('$a_id', '$k_id', '$nilai')";
-    if (mysqli_query($connect, $sql)) $_SESSION['flash_message'] = ['Value has been added!', 'success'];
-    else $_SESSION['flash_message'] = ['Cant add value!', 'danger'];
+
+    try {
+        mysqli_query($connect, $sql);
+        $_SESSION['flash_message'] = ['Value has been added!', 'success'];
+    } catch (\Throwable $th) {
+        if (mysqli_errno($connect) == 1062) {
+            $_SESSION['flash_message'] = ['Cant add value!', 'danger'];
+        } else $_SESSION['flash_message'] = [mysqli_error($connect), 'danger'];
+    }
 
     mysqli_close($connect);
     header('Location: ../matrix-add.php');
