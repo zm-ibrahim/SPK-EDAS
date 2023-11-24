@@ -89,7 +89,7 @@ $kode_kriteria_unik = array_unique(array_column($matriks_data, 'kode_kriteria'))
                 <div class="card" id="editForm" style="display: none;">
                     <div class="card-header">
                         <h4>Update Matrix</h4>
-                        <p class="fa fa-exclamation-circle card-header-action">Perhatikan halaman Unlisted Value. Pastikan Anda sudah memberi nilai sebelum melakukan update</p>
+                        <p class="fa fa-exclamation-circle card-header-action"> Perhatikan halaman Unlisted Value. Pastikan Anda sudah memberi nilai sebelum melakukan update</p>
                     </div>
                     <form action="../dashboard/process/m-edit.php" method="post">
                         <div class="card-body">
