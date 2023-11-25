@@ -1,7 +1,9 @@
-<?php include 'templates/layout.php';
-// include '../connect.php';
-// include 'process/dashboard.php';
+<?php
+include 'templates/layout.php';
+include '../connect.php';
+include '../dashboard/process/dashboard.php';
 ?>
+
 <section class="section">
     <div class="section-header">
         <h1>Dashboard</h1>
@@ -34,7 +36,7 @@
                             <h4>Listed Alternative</h4>
                         </div>
                         <div class="card-body">
-                            #
+                            <?= $totalAlternatif ?>
                         </div>
                     </div>
                 </div>
@@ -49,7 +51,7 @@
                             <h4>Listed Criteria</h4>
                         </div>
                         <div class="card-body">
-                            #
+                            <?= $totalKriteria ?>
                         </div>
                     </div>
                 </div>
@@ -64,7 +66,7 @@
                             <h4>Highest Score</h4>
                         </div>
                         <div class="card-body">
-                            #
+                            <small class="small"><?= $nilaiASPertama ?> (<?= $kodeAlternatifPertama ?>)</small>
                         </div>
                     </div>
                 </div>
