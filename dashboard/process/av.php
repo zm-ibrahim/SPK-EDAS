@@ -27,21 +27,3 @@ if (mysqli_query($connect, $sql_insert)) $_SESSION['flash_message'] = ['Average 
 else $_SESSION['flash_message'] = ['Cant update alternative', 'danger'];
 mysqli_close($connect);
 header('Location: ../rerata.php');
-
-
-
-// VIEW
-
-// $sql_av = "SELECT 
-// k.kode AS kode_kriteria,
-// SUM(me.nilai) / COUNT(DISTINCT a.kode) AS nilai_rata_rata
-// FROM 
-// alternatif a
-// CROSS JOIN 
-// kriteria k
-// LEFT JOIN 
-// matriks_evaluasi me ON a.id = me.id_alternatif AND k.id = me.id_kriteria
-// GROUP BY 
-// k.kode";
-
-// $av = mysqli_query($connect, $sql_av);
