@@ -39,6 +39,6 @@
                 <li><a class="nav-link" href="solusi.php">Solusi</a></li>
             </ul>
         </li>
-        <li><a class="nav-link" href="#"><i class="fas fa-trophy"></i> <span>Peringkat</span></a></li>
+        <li><a class="nav-link" href="rank.php"><i class="fas fa-trophy"></i> <span>Peringkat</span></a></li>
         <li><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
 </aside>
