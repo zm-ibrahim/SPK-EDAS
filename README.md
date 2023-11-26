@@ -1,19 +1,21 @@
 
-# SPK - EDAS
+# **SPK - EDAS**
 
 Menentukan Keputusan secara **sistematis dan terstandar** tidak pernah **Semudah Ini**
+==
 
-### Metode EDAS
+
+## Metode EDAS
 
 Sistem Pendukung Keputusan dengan metode **Evaluation based on Distance from Average Solution (EDAS)** 
 
-**EDAS** membantu dalam menentukan keputusan melalui perhitungan rerata solusi dan perhitungan jarak solusi melalui beberapa tahap berdasarkan nilai dan bobot yang diberikan kepada Alternatif dan Kriteria.
+ - **EDAS** membantu dalam menentukan keputusan melalui perhitungan rerata solusi dan perhitungan jarak solusi melalui beberapa tahap berdasarkan nilai dan bobot yang diberikan kepada Alternatif dan Kriteria.
 
-**Kriteria** : Indikator penilaian dengan bobot untuk menilai alternatif terdaftar
+ - **Kriteria** : Indikator penilaian dengan bobot untuk menilai alternatif terdaftar
 
-**Alternatif** : Data yang didaftarkan untuk dilakukan penilaian
+ - **Alternatif** : Data yang didaftarkan untuk dilakukan penilaian
 
-**Bobot** : Indikator penilaian berupa persentase pada kriteria (100/100)
+ - **Bobot** : Indikator penilaian berupa persentase pada kriteria (100/100)
 
 ///
 
