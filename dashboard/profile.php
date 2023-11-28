@@ -32,7 +32,7 @@ $profile = $profile->fetch_assoc();
 
 <section class="section">
     <div class="section-header">
-        <h1>Profie</h1>
+        <h1>Profile</h1>
     </div>
 
     <div class="section-body">
