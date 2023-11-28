@@ -1,7 +1,7 @@
 
 # **SPK - EDAS**
 
-Menentukan Keputusan secara **sistematis dan terstandar** tidak pernah **Semudah Ini**
+Menentukan Keputusan secara **sistematis dan terstandar** dengan **Semudah Ini**
 ==
 
 
