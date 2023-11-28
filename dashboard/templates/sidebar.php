@@ -40,5 +40,5 @@
             </ul>
         </li>
         <li><a class="nav-link" href="rank.php"><i class="fas fa-trophy"></i> <span>Peringkat</span></a></li>
-        <li><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+        <li><a class="nav-link" href="info.php"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
 </aside>
