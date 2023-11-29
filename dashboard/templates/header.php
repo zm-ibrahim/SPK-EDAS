@@ -31,4 +31,5 @@ $id = $_SESSION['user_id'];
     <!-- Template CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
 </head>

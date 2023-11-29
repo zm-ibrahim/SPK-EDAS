@@ -20,22 +20,15 @@ include '../connect.php';
                             2015 untuk menangani masalah MCDM. <br>
                             Metode EDAS menggunakan solusi rata-rata untuk penilaian
                             alternatif dengan cara menghitung jarak rata-rata positif (PDA)
-                            dan jarak rata-rata negatif (NDA)
+                            dan jarak rata-rata negatif (NDA) <br>
                             Metode ini sangat berguna ketika kriteria yang bertentangan harus
                             dipertimbangkan (benefit dan cost), stabil ketika berbagai kriteria
-                            bobot digunakan, dan konsisten dengan metode lain</p>
+                            bobot digunakan, dan konsisten dengan metode lain
+                        </p>
+                        <h6>Project ini sebagai tugas pemenuhan mata kuliah Sistem Pendukung Keputusan</h6>
                     </div>
                 </div>
                 <div class="card">
-                    <style>
-                        iframe {
-                            width: 100%;
-                            height: 100vh;
-                            /* 100% dari tinggi viewport */
-                            border: 0;
-                            /* Menghilangkan border iframe */
-                        }
-                    </style>
                     <div class="card-header">
                         <h4>Jurnal Rujukan</h4>
                     </div>
