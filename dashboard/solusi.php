@@ -48,7 +48,7 @@ include '../connect.php';
                 <!-- Tabel NSP dan NSN -->
                 <div class="card">
                     <div class="card-header">
-                        <h4>Nilai Normalisasi Solusi Positif (SP) dan Negatif (SN) untuk Setiap Alternatif</h4>
+                        <h4>Nilai Normalisasi Solusi Positif (NSP) dan Negatif (NSN) untuk Setiap Alternatif</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
