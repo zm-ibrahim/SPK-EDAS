@@ -32,13 +32,7 @@
             </ul>
         </li>
         <li class="menu-header">KALKULASI</li>
-        <li class="nav-item dropdown">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-calculator"></i> <span>Tetapan</span></a>
-            <ul class="dropdown-menu">
-                <li><a class="nav-link" href="rerata.php">Rerata</a></li>
-                <li><a class="nav-link" href="solusi.php">Solusi</a></li>
-            </ul>
-        </li>
+        <li><a href="tetapan.php" class="nav-link"><i class="fas fa-calculator"></i> <span>Tetapan</span></a></li>
         <li><a class="nav-link" href="rank.php"><i class="fas fa-trophy"></i> <span>Peringkat</span></a></li>
         <li><a class="nav-link" href="info.php"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
 </aside>

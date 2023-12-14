@@ -14,3 +14,9 @@ iframe {
     border: 0;
     /* Menghilangkan border iframe */
 }
+
+@media print {
+    .main-sidebar sidebar-style-2 {
+        display: none !important;
+    }
+}
