@@ -2,6 +2,7 @@
 # **SPK - EDAS**
 
 Menentukan Keputusan secara **sistematis dan terstandar** dengan **Semudah Ini**
+disusun untuk pemenuhan tugas kuliah
 ==
 
 
